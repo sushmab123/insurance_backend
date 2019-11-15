@@ -47,6 +47,7 @@ tools {
 			 stage('Release') {
          steps {
             // run the jar file
+	sh 'export BUILD_ID=dontkillme' 
             sh 'cp $WORKSPACE/src/main/resources/application.properties /opt/insurance/'
 			//sh '$JAVA_HOME/bin/java -version'
 			//sh 'printenv'
