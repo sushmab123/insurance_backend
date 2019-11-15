@@ -51,7 +51,7 @@ tools {
             sh 'cp $WORKSPACE/src/main/resources/application.properties /opt/insurance/'
 			//sh '$JAVA_HOME/bin/java -version'
 			//sh 'printenv'
-            sh 'export JENKINS_NODE_COOKIE=dontkillme;nohup java -jar $WORKSPACE/target/einsurance-0.0.1-SNAPSHOT.jar -spring.config.location=file:/opt/insurance/application.properties &'
+            sh 'export JENKINS_NODE_COOKIE=$BUILD_ID;nohup java -jar $WORKSPACE/target/einsurance-0.0.1-SNAPSHOT.jar -spring.config.location=file:/opt/insurance/application.properties &'
             }
 
              }
